@@ -156,7 +156,9 @@ public class ECSmartRegisterController {
         sort(ecClients, new Comparator<SmartRegisterClient>() {
             @Override
             public int compare(SmartRegisterClient oneECClient, SmartRegisterClient anotherECClient) {
-                return oneECClient.wifeName().compareToIgnoreCase(anotherECClient.wifeName());
+                String oneECClientWifeName = oneECClient.wifeName() == null ? "" : oneECClient.wifeName();
+                String anotherECClientWifeName = anotherECClient.wifeName() == null ? "" : anotherECClient.wifeName();
+                return oneECClientWifeName.compareToIgnoreCase(anotherECClientWifeName);
             }
         });
     }

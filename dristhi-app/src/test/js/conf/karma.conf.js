@@ -2,6 +2,7 @@ module.exports = function (config) {
     config.set({
         basePath: '../../../../',
         frameworks: ['jasmine'],
+        browsers: ['PhantomJS'],
         exclude: [
             'assets/js/lib/bootstrap.js',
             'assets/js/lib/bootstrap.min.js',
